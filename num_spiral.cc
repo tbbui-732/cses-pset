@@ -4,8 +4,6 @@
 using namespace std;
 typedef long long ll;
 
-vector<ll> coord_values;
-
 void num_spiral(ll boundary, ll top_val, ll bottom_val, ll row, ll col) {
     ll res;
 
@@ -25,7 +23,7 @@ void num_spiral(ll boundary, ll top_val, ll bottom_val, ll row, ll col) {
         }
     }
     
-    coord_values.push_back(res);
+    cout << res << "\n";
 }
 
 int main(void) {
@@ -46,10 +44,6 @@ int main(void) {
 
         // print coordinate value
         num_spiral(boundary, top_val, bottom_val, row, col);
-    }
-
-    for (ll i = 0; i < coord_values.size(); ++i) {
-        cout << coord_values[i] << "\n";
     }
 
     return 0;
